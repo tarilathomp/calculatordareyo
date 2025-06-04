@@ -49,10 +49,18 @@ buttons.forEach((button) => {
         }
         display.value = result;
         // Reset for next calculation
-        currentInput = "";
-        operator = "";
-        firstOperand = "";
-        waitingForSecondOperand = false;
+        if (result === "Error") {
+          // Reset all state after error so calculator is usable again
+          currentInput = "";
+          operator = "";
+          firstOperand = "";
+          waitingForSecondOperand = false;
+        } else {
+          currentInput = "";
+          operator = "";
+          firstOperand = "";
+          waitingForSecondOperand = false;
+        }
       }
     } else {
       // Digit button

@@ -52,16 +52,43 @@ button {
   cursor: pointer;
   transition: background 0.2s;
 }
+button:hover, button:focus {
+  background: #e3e3e3;
+  color: #5a0bf8;
+  outline: none;
+}
 button:hover {
   background: #d41212;
 }
 .operator {
   background: #f90404;
 }
+.operator:hover, .operator:focus {
+  background: #ff6b6b;
+  color: #fff;
+}
 .equal {
   background: #1192c4;
   grid-column: span 2;
 }
+.equal:hover, .equal:focus {
+  background: #1bb6e0;
+  color: #fff;
+}
 .clear {
   background: #f70606;
+}
+.clear:hover, .clear:focus {
+  background: #ff6b6b;
+  color: #fff;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
